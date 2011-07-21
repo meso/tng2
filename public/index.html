@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>東京Node学園 2時限目</title>
+<link rel="stylesheet" href="stylesheets/common.css">
+<script src="javascripts/jquery.js"></script>
+<script src="javascripts/jquery.presentation.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+  var socket = io.connect('http://sakura.mesolabs.com:3008/');
+  socket.on('count', function(data) {
+    console.log(data);
+    if (data.count) {
+      $('#count').text(data.count);
+    }
+  });
+</script>
+</head>
+<body>
+  <div class="mod-page top">
+    <div>
+      <h1>東京Node学園<br />2時限目</h1>
+      <h2>〜アイデアソン for Node.js Knockout 2011〜</h2>
+      <p>Node.js 日本ユーザグループ (http://nodejs.jp/)</p>
+      <p>Hashtag: #tng2</p>
+      <br /><br /><br />
+      <h2>この資料は http://tng2.mesolabs.com/ にあります</h2>
+    </div>
+  </div>
+ 
+  <div class="mod-page plain">
+    <div>
+      <h2>ご挨拶</h2>
+      <h3>氏名</h3>
+      <ul>
+        <li>清水 俊博</li>
+      </ul>
+      <h3>所属</h3>
+      <ul>
+        <li>株式会社ドワンゴ</li>
+        <li>Node.js 日本ユーザグループ 代表</li>
+        <li>java-ja</li>
+        <li>etc...</li>
+      </ul>
+      <h3>SocialMedia</h3>
+      <ul>
+        <li>Twitter: <a href="http://twitter.com/meso">meso</a></li>
+        <li>Hatena: <a href="http://d.hatena.ne.jp/t_43z">t_43z</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mod-page shout">
+    <div>
+      <p>Node.js Knockout</p>
+    </div>
+  </div>
+
+  <div class="mod-page plain">
+    <div>
+      <h2>Node.js Knockout 2010 のルール</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Node.js</h2>
+      <ul>
+        <li>Node.js
+        <p>全てのアプリケーションはNode.jsを使って作成すること<br />
+           データストアとしてMongoDBとかを使ったりするのはOK</p></li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>48Hours</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours
+        <p>2010-08-28 00:00:00 UTC 〜 2010-08-30 00:00:00 UTC<br />
+           開始前でもコンセプトを考えたり、手書きのスケッチ書いたり、チームで議論したりするのはOK<br />
+           コードや画像などのデジタルデータは開始後に作成すること<br />
+           48時間経過後にコミットしたら失格</p></li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Team</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team
+        <p>チームは1〜4人で構成すること</p></li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Source</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source
+        <p>ソースコードはGithubにコミットすること<br />
+           https://github.com/nko/mesolabs</p></li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Deploy</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy
+        <p>Joyent SmartMachine(http://no.de/)かHerokuにdeployすること<br />
+           ただし、HerokuはWebSocketが使えないなどの制限がきつかったため、ほとんどのチームがJoyentを使った</p></li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Web Application</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application
+        <p>Webアプリケーション以外でもいいが、審査するのが難しいため公平に審査されないかも<br />
+           ライブラリとかユーティリティとかデスクトッププログラムの場合はnpmリポジトリにdeployすること</p></li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Library</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library
+        <p>ライブラリやプラグインやモジュールなどは自由に利用できる公開されたものを使うのが望ましい<br />
+        どのライブラリを使ったかをチームプロフィールに明記すること<br />
+           自分のチーム専用じゃない一般的に有用なライブラリを事前に公開しておき、それを使うのはOK</p></li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Web Service</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service
+        <p>TwitterやGoogleMapsなどのWebサービスのAPIを使うのはOK<br />
+           どのAPIを使ったかをチームプロフィールに明記すること</p></li>
+        <li>Ownership</li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Ownership</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership
+        <p>ソースコードはオープンソースにすることが望ましいが、所有権はチームにあるのでチーム次第で好きにして良い</p></li>
+        <li>Judgement</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Judgement</h2>
+      <ul>
+        <li>Node.js</li>
+        <li>48Hours</li>
+        <li>Team</li>
+        <li>Source</li>
+        <li>Deploy</li>
+        <li>Web Application</li>
+        <li>Library</li>
+        <li>Web Service</li>
+        <li>Ownership</li>
+        <li>Judgement
+        <p>審査員による審査と、一般による審査が50:50<br />
+           審査員はBrendan Eich, John Resig, Ryan Dahlやその他の著名開発者たち総勢65名</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>Node.js Knockout 2010 の参加者特典</h2>
+      <ul>
+        <li>Joyent SmartMachine(http://no.de/)</li>
+        <li>Heroku Node.jsベータ(http://heroku.com/)</li>
+        <li>Upload Juicer(http://www.uploadjuicer.com/)</li>
+        <li>Google Storage for Developers(http://code.google.com/apis/storage/)</li>
+        <li>Redis To Go(http://redistogo.com/</li>
+        <li>CouchIO(http://couchbase.com/)</li>
+        <li>MongoHQ(http://www.mongohq.com/)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page shout">
+    <div>
+      <p>何よりも超豪華な審査員に自分のアプリを見てもらえること</p>
+    </div>
+  </div>
+
+  <div class="mod-page plain">
+    <div>
+      <h2>去年の受賞作品</h2>
+      <ul>
+        <li>Overall: Swarmation (http://2010.nodeknockout.com/teams/saber-tooth-moose-lion/)
+        <p>巨大なマス目上を一人が1マスとなって動き回り、協力して出されたお題の形を作るゲーム</p></li>
+        <li>Solo: Blädderblock (http://2010.nodeknockout.com/teams/rallarpojken/)
+        <p>Canvasを使ったお絵描きゲーム</p></li>
+        <li>Utility: Wrath (http://2010.nodenockout.com/teams/prague-js/)
+        <p>APIのテスト/モックサービス</p></li>
+      </ul>
+    </div>
+  </div>
+
+   <div class="mod-page plain">
+    <div>
+      <h2>去年の受賞作品(続き)</h2>
+      <ul>
+        <li>Design: GIANT ROBOT SMASHING INTO OTHER GIANT ROBOTS (http://2010.nodeknockout.com/teams/piston-hurricane/)
+        <p>マルチプレーヤーのリアルタイムタワーディフェンスゲーム</p></li>
+        <li>Innovation: Serrano (http://2010.nodenockout.com/teams/starcraft-2-destroy-my-marriage/)
+        <p>DOM操作をリアルタイムに共有する</p></li>
+        <li>Compliteness: Gabber (http://2010.nodenockout.com/teams/explorer-sox/)
+        <p>任意のサイトに埋め込めるチャットWidget</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>去年の受賞作品(続き)</h2>
+      <ul>
+        <li>Popularity: Scrabb.ly (http://2010.nodenockout.com/teams/seattle-js/)
+        <p>マルチプレーヤーのリアルタイムScrabble</p></li>
+      </ul>
+      <h2>TechCrunch選</h2>
+      <p>http://jp.techcrunch.com/archives/20100901nodejs-knockout/</p>
+    </div>
+  </div>
+
+  <div class="mod-page plain">
+    <div>
+      <h2>個人的に気になったもの</h2>
+      <ul>
+        <li>参加作品以上に、Node.js Knockout参加者向けのダッシュボードが格好良かった
+        <p>色んなもの（全チームのコミットログや作品のアクセスランキングなど）がリアルタイムで見られる</p></li>
+        <li>Innovation 2位のMapRejuice(http://2010.nodeknockout.com/teams/anansi/)
+        <p>SETI@Homeみたいなのをブラウザでページを表示するだけで実現<br />
+           http://maprejuice.com/</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mod-page plain">
+    <div>
+      <h2>僕の記録</h2>
+      <ul>
+        <li>リアルタイム対戦タイピングゲームかリアルタイム対戦たけのこニョッキかで迷う</li>
+        <li>開始2時間半後からコーディング始める</li>
+        <li>夜中にno.deにdeployしようとしたができない！
+        <p>会社でアカウント作成したときに会社マシンのSSH-Keyを登録。電車動き出した早朝に会社いく羽目に。</p></li>
+        <li>成果物: http://typing.mesolabs.com/</li>
+        <li>評価: http://2010.nodeknockout.com/teams/mesolabs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mod-page shout">
+    <div>
+      <p>アイデアソンについて</p>
+    </div>
+  </div>
+
+  <div class="mod-page plain">
+    <div>
+      <h2>アイデアソンのやり方</h2>
+      <ol>
+        <li>チーム分け<p>この後すぐ</p></li>
+        <li>自己紹介<p>軽く。呼びあえる用に</p></li>
+        <li>ブレスト<p>どんなアイデアも否定しない</p></li>
+        <li>まとめる<p>紙に書いたり</p></li>
+        <li>発表<p>1チーム2-3分</p></li>
+        <li>投票</li>
+      </ol>
+    </div>
+  </div>
+  <div class="mod-page plain">
+    <div>
+      <h2>アイデアソンのルール</h2>
+      <p>今日得たアイデアをそのままパクって参加するのは禁止</p>
+      <p>参考にするのはいいが、必ず何かしらのオリジナル要素を加える（もしくは削る）こと</p>
+    </div>
+  </div>
+
+
+  <div class="mod-page shout">
+    <div>
+      <p>何よりも積極的に参加すること</p>
+    </div>
+  </div>
+
+<div class="mod-page"><div>
+    それでは東京Node学園 2時限目をお楽しみください
+</div></div>
+
+<hr />
+
+<ul class="mod-pager" id="pager"> <li id="pager-L"><a href="#">L</a></li> <li id="pager-R"><a href="#">R</a></li> </ul>
+<p class="mod-pageNum" id="pageNum"> <span class="current" id="pageNum-current">0</span> / <span class="total" id="pageNum-total">0</span> </p>
+<div class="mod-viewer" id="viewer">閲覧者数: <span id="count">0</span> 人</div>
+
+</body>
+</html>
